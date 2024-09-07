@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   api-node:
-    image: nest-agro.v1.2
+    image: docker.io/bohdanzelinskyi/nest-dev:latest
     environment:
       - NODE_ENV=production
     deploy:

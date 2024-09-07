@@ -16,8 +16,3 @@ async function bootstrap() {
   await app.listen(3000, '0.0.0.0');
 }
 bootstrap();
-
-// $ docker exec -it e46c3c6c93af /bin/sh             
-
-// /app # netstat -tuln | grep 3000
-// tcp        0      0 127.0.0.1:3000          0.0.0.0:*               LISTEN      
