@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api-node:
+    image: nest-agro.v1.2
+    environment:
+      - NODE_ENV=production
+    deploy:
+      replicas: 3
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - api-node
